@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+int
+main ()
+{
+  int roomLength;
+  printf ("What is the room length in feet?\n");
+  scanf ("%d", &roomLength);
+
+  int magnification;		//This is the magnification of the 4:3 projector from class; can be changed depending on projector
+  magnification = 4;
+
+  int fontSize;
+  fontSize = (72 * 9 * 12 * roomLength) / (magnification * 1000);	//This is from the equation given in class; 72 is from font proportion and 12 changes inches to feet; 9 and 1000 are from equation given in class
+
+  printf ("Use %d font size of for a class of average eyesight\nUse %d font size for a class with poor eyesight", fontSize, fontSize * 2);	//Normal class is 20/20 vision while poor class is 20/40
+
+  return 0;
+}
+
